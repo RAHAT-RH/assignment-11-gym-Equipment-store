@@ -12,14 +12,14 @@ const AllEquipment = () => {
     const [page, setPage] = useState(0);
     const [pageSize, setPageSize] = useState(10)
 
-    useEffect(()=> {
+    useEffect(() => {
         fetch("http://localhost:5000/equipmentCount")
-        .then(res => res.json())
-        .then(data => {
-            const count = data.count;
-            const pages = Math.ceil(count/10);
-            setTotalPage(pages)
-        })
+            .then(res => res.json())
+            .then(data => {
+                const count = data.count;
+                const pages = Math.ceil(count / 10);
+                setTotalPage(pages)
+            })
     }, [])
 
     // get data
@@ -27,7 +27,7 @@ const AllEquipment = () => {
         fetch(`http://localhost:5000/allEquipments?page=${page}&size=${pageSize}`)
             .then(res => res.json())
             .then(data => setEquipments(data))
-    }, [page, pageSize])
+    }, [equipments, page, pageSize])
 
     // Delete handler
     const handleDelete = id => {
@@ -71,7 +71,7 @@ const AllEquipment = () => {
                                     <div className="profile-card-4 text-center position-relative"><img src={equipment.img} alt='' className="img img-responsive" />
                                         <div className='icon position-absolute top-0 d-flex justify-content-between w-100'>
                                             <Link to={`/update/${equipment._id}`}><FontAwesomeIcon icon={faEdit} style={{ fontSize: "30px", padding: "5px", }}></FontAwesomeIcon></Link>
-                                            <button onClick={() => handleDelete(equipment._id)}  style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
+                                            <button onClick={() => handleDelete(equipment._id)} style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
                                         </div>
                                         <div className="profile-content">
                                             <Link to={`/details/${equipment._id}`} className="text-decoration-none">
@@ -106,7 +106,7 @@ const AllEquipment = () => {
                 </div>
                 <div className="container text-center mt-4 pagination">
                     {
-                        [...Array(totalPage).keys()].map(number => <button key={number._id}  className={page === number ? 'selected' : ''} onClick={() => setPage(number)}>{number + 1}</button>)
+                        [...Array(totalPage).keys()].map(number => <button key={number._id} className={page === number ? 'selected' : ''} onClick={() => setPage(number)}>{number + 1}</button>)
                     }
                     {pageSize}
                     <select onChange={e => setPageSize(e.target.value)}>
