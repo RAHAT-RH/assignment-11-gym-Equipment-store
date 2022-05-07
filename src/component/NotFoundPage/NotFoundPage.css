@@ -1,0 +1,8 @@
+.bg-404{
+    background: url(../../img/hero/hero-2.jpg);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-size: center;
+    z-index: 1;
+}

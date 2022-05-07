@@ -1,0 +1,39 @@
+[
+    {   "id": 1,
+        "name": "Class Drop-In",
+        "price": "39.0",
+        "subName": "Single Class",
+        "number01": "Unlimited equipments",
+        "number02": "No Fixed Trainer",
+        "number03": "Weight losing classes",
+        "number04": "❌",
+        "number05": "❌",
+        "number06": "❌",
+        "img": "https://i.ibb.co/d2580z1/02.jpg"
+    },
+    {   "id": 2,
+        "name": "12 Month unlimited",
+        "price": "99.0",
+        "subName": "Dabble Class",
+        "number01": "Unlimited equipments",
+        "number02": "Fixed Expert Trainer",
+        "number03": "Weight losing classes",
+        "number04": "Grow Mussels",
+        "number05": "No time restriction",
+        "number06": "Extra Food Care ing",
+        "img": "https://i.ibb.co/GTdsXfc/01.jpg"
+    },
+    {   "id": 3,
+        "name": "6 Month unlimited",
+        "price": "59.0",
+        "subName": "Fixed Class",
+        "number01": "Unlimited equipments",
+        "number02": "No Fixed Trainer",
+        "number03": "Weight losing classes",
+        "number04": "❌",
+        "number05": "No time restriction",
+        "number06": "❌",
+        "img": "https://i.ibb.co/FK306VM/4.jpg"
+    }
+]
+

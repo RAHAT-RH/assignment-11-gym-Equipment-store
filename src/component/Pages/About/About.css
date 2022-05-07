@@ -1,0 +1,27 @@
+.set-bg {
+    background: url(../../../img/about-us.jpg);
+    width: 100%;
+}
+.set-bg-two{
+    background: url(../../../img/about-us.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.set-bg-three {
+    background: url(../../../img/banner-bg.jpg);
+    width: 100%;
+    height: 100%;
+}
+.set-photo5{
+    background: url(../../../img/team/team-2.jpg);
+    width: 100%;
+    height: 100%;
+}
+.set-photo6{
+    background: url(../../../img/team/team-3.jpg);
+    width: 100%;
+    height: 100%;
+}
