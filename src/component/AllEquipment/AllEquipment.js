@@ -2,10 +2,13 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../fireBase.init';
 import './AllEquipment.css';
 
 const AllEquipment = () => {
+    const [user] = useAuthState(auth);
     const [equipments, setEquipments] = useState([]);
     const [totalPage, setTotalPage] = useState(0);
     const [page, setPage] = useState(0);
@@ -68,10 +71,12 @@ const AllEquipment = () => {
                             equipments.map(equipment =>
                                 <div className="col-md-3" key={equipment._id}>
                                     <div className="profile-card-4 text-center position-relative"><img src={equipment.img} alt='' className="img img-responsive" />
-                                        <div className='icon position-absolute top-0 d-flex justify-content-between w-100'>
-                                            <Link to={`/update/${equipment._id}`}><FontAwesomeIcon icon={faEdit} style={{ fontSize: "30px", padding: "5px", }}></FontAwesomeIcon></Link>
-                                            <button onClick={() => handleDelete(equipment._id)} style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
-                                        </div>
+                                        {
+                                            user?.uid ? <div className='icon position-absolute top-0 d-flex justify-content-between w-100'>
+                                                <Link to={`/update/${equipment._id}`}><FontAwesomeIcon icon={faEdit} style={{ fontSize: "30px", padding: "5px", }}></FontAwesomeIcon></Link>
+                                                <button onClick={() => handleDelete(equipment._id)} style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
+                                            </div> : ''
+                                        }
                                         <div className="profile-content">
                                             <Link to={`/details/${equipment._id}`} className="text-decoration-none">
                                                 <div className="profile-name ">

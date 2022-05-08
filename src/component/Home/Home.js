@@ -20,7 +20,7 @@ import auth from '../../fireBase.init';
 
 
 const Home = () => {
-
+    const [user] = useAuthState(auth);
     // const [enroll] = useHook();
     const [equipments, setEquipments] = useState([]);
     useEffect(() => {
@@ -79,13 +79,13 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        
-                            <div className="hi-text">
-                                <span>Shape your body</span>
-                                <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
-                                <Link to="/" className="primary-btn">Get info</Link>
-                            </div>
-                        
+
+                        <div className="hi-text">
+                            <span>Shape your body</span>
+                            <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
+                            <Link to="/" className="primary-btn">Get info</Link>
+                        </div>
+
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -229,10 +229,12 @@ const Home = () => {
                             equipments.slice(0, 6).map(equipment =>
                                 <div className="col-md-4" key={equipment._id}>
                                     <div className="profile-card-4 text-center position-relative"><img src={equipment.img} alt='' className="img img-responsive" />
-                                        <div className='icon position-absolute top-0 d-flex justify-content-between w-100'>
-                                            <Link to={`/update/${equipment._id}`}><FontAwesomeIcon icon={faEdit} style={{ fontSize: "30px", padding: "5px", }}></FontAwesomeIcon></Link>
-                                            <button onClick={() => handleDelete(equipment._id)} style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
-                                        </div>
+                                        {
+                                            user?.uid ? <div className='icon position-absolute top-0 d-flex justify-content-between w-100'>
+                                                <Link to={`/update/${equipment._id}`}><FontAwesomeIcon icon={faEdit} style={{ fontSize: "30px", padding: "5px", }}></FontAwesomeIcon></Link>
+                                                <button onClick={() => handleDelete(equipment._id)} style={{ backgroundColor: 'transparent', border: "none", padding: "5px", }}><FontAwesomeIcon icon={faTrashAlt} style={{ fontSize: "30px", color: 'red', padding: "5px", }}></FontAwesomeIcon></button>
+                                            </div> : ''
+                                        }
 
                                         <div className="profile-content">
                                             <Link to={`/details/${equipment._id}`} className="text-decoration-none">
