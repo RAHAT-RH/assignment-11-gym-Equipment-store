@@ -11,7 +11,7 @@ const Details = () => {
     // console.log(q)
 
     useEffect(() => {
-        const url = `http://localhost:5000/equipments/${id}`;
+        const url = `https://sleepy-dawn-70645.herokuapp.com/equipments/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSingleEquipment(data))
@@ -21,26 +21,26 @@ const Details = () => {
 
     const delivered = id => {
         const newQuantity = parseInt(quantity) - 1;
-        const updateProduct = {...singleEquipment, quantity:newQuantity}
+        const updateProduct = { ...singleEquipment, quantity: newQuantity }
         setSingleEquipment(updateProduct);
 
-        
+
 
 
         const proceed = window.confirm('Are you sure want to deliver');
-        if(proceed) {
-            const url = `http://localhost:5000/updateQuantity/${id}`
+        if (proceed) {
+            const url = `https://sleepy-dawn-70645.herokuapp.com/updateQuantity/${id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
-                    'content-type' : 'application/json'
+                    'content-type': 'application/json'
                 },
                 body: JSON.stringify(updateProduct)
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log('success', data)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('success', data)
+                })
         }
 
 

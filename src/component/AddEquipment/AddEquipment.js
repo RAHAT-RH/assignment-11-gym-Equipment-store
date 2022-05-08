@@ -4,7 +4,7 @@ import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
 const AddEquipment = () => {
-    
+
     const handleAddEquipment = event => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -21,7 +21,7 @@ const AddEquipment = () => {
 
 
 
-        fetch("http://localhost:5000/addEquipment", {
+        fetch("https://sleepy-dawn-70645.herokuapp.com/addEquipment", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

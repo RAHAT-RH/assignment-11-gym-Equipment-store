@@ -15,7 +15,7 @@ const AllEquipment = () => {
     const [pageSize, setPageSize] = useState(10)
 
     useEffect(() => {
-        fetch("http://localhost:5000/equipmentCount")
+        fetch("https://sleepy-dawn-70645.herokuapp.com/equipmentCount")
             .then(res => res.json())
             .then(data => {
                 const count = data.count;
@@ -26,7 +26,7 @@ const AllEquipment = () => {
 
     // get data
     useEffect(() => {
-        fetch(`http://localhost:5000/allEquipments?page=${page}&size=${pageSize}`)
+        fetch(`https://sleepy-dawn-70645.herokuapp.com/allEquipments?page=${page}&size=${pageSize}`)
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, [equipments, page, pageSize])
@@ -36,7 +36,7 @@ const AllEquipment = () => {
         console.log("deleting id", id)
         const proceed = window.confirm("Are You Sure You Want To Delete");
         if (proceed) {
-            const url = `http://localhost:5000/delete/${id}`;
+            const url = `https://sleepy-dawn-70645.herokuapp.com/delete/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
