@@ -58,7 +58,7 @@ const Blog = () => {
                                 <footer className="blockquote-footer pt-4 mt-4 border-top">Differences between sql and nosql databases.
 
 
-                                    <cite title="Source Title"></cite>
+                                     <cite title="Source Title"></cite>
                                 </footer>
                             </blockquote>
                         </div>
