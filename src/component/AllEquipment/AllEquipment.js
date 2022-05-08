@@ -15,7 +15,7 @@ const AllEquipment = () => {
     const [pageSize, setPageSize] = useState(10)
 
     useEffect(() => {
-        fetch("https://sleepy-dawn-70645.herokuapp.com/equipmentCount")
+        fetch("http://localhost:5000/equipmentCount")
             .then(res => res.json())
             .then(data => {
                 const count = data.count;
@@ -26,7 +26,7 @@ const AllEquipment = () => {
 
     // get data
     useEffect(() => {
-        fetch(`https://sleepy-dawn-70645.herokuapp.com/allEquipments?page=${page}&size=${pageSize}`)
+        fetch(`http://localhost:5000/allEquipments?page=${page}&size=${pageSize}`)
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, [equipments, page, pageSize])
@@ -36,7 +36,7 @@ const AllEquipment = () => {
         console.log("deleting id", id)
         const proceed = window.confirm("Are You Sure You Want To Delete");
         if (proceed) {
-            const url = `https://sleepy-dawn-70645.herokuapp.com/delete/${id}`;
+            const url = `http://localhost:5000/delete/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -108,7 +108,7 @@ const AllEquipment = () => {
                         }
                     </Row>
                 </div>
-                <div className="container text-center mt-4 pagination">
+                <div className=" text-center mt-4 pagination">
                     {
                         [...Array(totalPage).keys()].map(number => <button key={number._id} className={page === number ? 'selected' : ''} onClick={() => setPage(number)}>{number + 1}</button>)
                     }

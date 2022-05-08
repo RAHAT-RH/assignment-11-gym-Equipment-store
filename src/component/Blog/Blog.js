@@ -33,8 +33,8 @@ const Blog = () => {
                         <div className="col-lg-6 mx-auto my-4 ">
                             <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded ">
                                 <div className="blockquote-custom-icon bg-info shadow-sm"><FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon></div>
-                                <p className="mb-0 mt-2 font-italic">"Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to. The situation is like that of an airline that needs to determine which people can come on board. The first step is to confirm the identity of a passenger to make sure they are who they say they are. Once a passenger’s identity has been determined, the second step is verifying any special services the passenger has access to, whether it’s flying first-class or visiting the VIP lounge."</p>
-                                <footer className="blockquote-footer pt-4 mt-4 border-top">Difference between authorization and authentication?
+                                <p className="mb-0 mt-2 font-italic">JavaScript is a programming language. It is running in any web browser with a proper browser engine. Nde.js: It is an interpreter and environment for JavaScript with some specific useful libraries which JavaScript programming can use separately."</p>
+                                <footer className="blockquote-footer pt-4 mt-4 border-top">Difference between javascript and nodejs
                                     <cite title="Source Title"></cite>
                                 </footer>
                             </blockquote>
@@ -42,16 +42,10 @@ const Blog = () => {
                         <div className="col-lg-6 mx-auto my-2">
                             <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded">
                                 <div className="blockquote-custom-icon bg-info shadow-sm"><FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon></div>
-                                <p className="mb-0 mt-2 font-italic">"Firebase is a free service provided by Google which can be used as a feature-rich back-end. Frontend developers can use Firebase to decrease development time and increase productivity. If you are a frontend developer which often gets frustrated and stuck because the backend is not ready then I have great news for me. Yes I have other options"</p>
-                                <h4>Firebase Alternatives</h4>
-                                <ul>
-                                    <li>Parse</li>
-                                    <li>Back4App</li>
-                                    <li>AWS Amplify</li>
-                                    <li>Kuzzle</li>
-                                    <li>Couchbase</li>
-                                </ul>
-                                <footer className="blockquote-footer pt-4 mt-4 border-top">Why are you using firebase? What other options do you have to implement authentication?
+                                <p className="mb-0 mt-2 font-italic">"MongoDB is the Document Oriented Database. MongoDB stores a lot of data in JSON format. MongoDB's performance is much faster than any RDBMS. MongoDB is designed to work with Large Scale Data. MongoDB can work on multiple servers. MongoDB can handle a large number of access requests easily. => There are 2 design patterns in programming. One is asynchronous programming and the other is synchronous programming. Node JS by default follows the Asynchronous pattern. That is, it does not wait for a task to be completed. In the meantime, NodeJS started another job. That’s why we use nodeJS."</p>
+                                <h4>X</h4>
+                                
+                                <footer className="blockquote-footer pt-4 mt-4 border-top">When should you use nodejs and when should you use mongodb?
                                     <cite title="Source Title"></cite>
                                 </footer>
                             </blockquote>
@@ -59,18 +53,9 @@ const Blog = () => {
                         <div className="col-lg-6 mx-auto my-2">
                             <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded">
                                 <div className="blockquote-custom-icon bg-info shadow-sm"><FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon></div>
-                                <p className="mb-0 mt-2 font-italic">"Firebase is originally developed by Firebase inc and later acquired by Google. It provides different kinds of services that help you to develop high-quality mobile and web applications to grow your business. It is compatible with Web, iOS, Android, and OS X clients. With Firebase, developers don’t need to worry about the backend programming, Authentication, API development, database (real-time cloud-hosted NoSQL database and cloud firestore), File storage, etc. Firebase provides all the services with very efficient and fast performance."</p>
-                                <h4>Different services firebase provide</h4>
-                                <ul>
-                                    <li>Cloud Firestore</li>
-                                    <li>Cloud Functions</li>
-                                    <li>Authentication</li>
-                                    <li>Hosting</li>
-                                    <li>Cloud Storage</li>
-                                    <li>Google Analytics</li>
-                                    <li>Predictions</li>
-                                </ul>
-                                <footer className="blockquote-footer pt-4 mt-4 border-top">What other services does firebase provide other than authentication
+                                <p className="mb-0 mt-2 font-italic">"SQL databases defines and manipulates data based structured query languageSQL. Seeing from a side this language is extremely powerful. SQL is one of the most versatile and widely-used options available which makes it a safe choice especially for great complex queries. But from other side it can be restrictive. SQL requires you to use predefined schemas to determine the structure of your data before you work with it. Also all of your data must follow the same structure. This can require significant up-front preparation which means that a change in the structure would be both difficult and disruptive to your whole system. "</p>
+                                
+                                <footer className="blockquote-footer pt-4 mt-4 border-top">Differences between sql and nosql databases.
 
 
                                     <cite title="Source Title"></cite>

@@ -6,7 +6,7 @@ const Update = () => {
     const { id } = useParams()
     const [equipments, setEquipments] = useState({});
     useEffect(() => {
-        fetch(`https://sleepy-dawn-70645.herokuapp.com/equipments/${id}`)
+        fetch(`http://localhost:5000/equipments/${id}`)
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, [equipments])
@@ -26,7 +26,7 @@ const Update = () => {
         const updateEquipment = { name, categories, quantity, country, details, img }
         console.log(name, categories, quantity, country, details, img);
 
-        const url = `https://sleepy-dawn-70645.herokuapp.com/update/${id}`;
+        const url = `http://localhost:5000/update/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -58,7 +58,7 @@ const Update = () => {
     //     const updateEquipment = { name, categories, quantity, country, details, img }
     //     // console.log(name, categories, quantity, country, details, img);
 
-    //     const url = `https://sleepy-dawn-70645.herokuapp.com/update/${id}`;
+    //     const url = `http://localhost:5000/update/${id}`;
     //     fetch(url, {
     //         method: "PUT",
     //         headers: {

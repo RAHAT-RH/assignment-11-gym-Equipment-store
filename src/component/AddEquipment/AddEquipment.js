@@ -21,7 +21,7 @@ const AddEquipment = () => {
 
 
 
-        fetch("https://sleepy-dawn-70645.herokuapp.com/addEquipment", {
+        fetch("http://localhost:5000/addEquipment", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

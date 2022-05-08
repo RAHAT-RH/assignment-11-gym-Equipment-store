@@ -11,7 +11,7 @@ const Details = () => {
     // console.log(q)
 
     useEffect(() => {
-        const url = `https://sleepy-dawn-70645.herokuapp.com/equipments/${id}`;
+        const url = `http://localhost:5000/equipments/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSingleEquipment(data))
@@ -29,7 +29,7 @@ const Details = () => {
 
         const proceed = window.confirm('Are you sure want to deliver');
         if (proceed) {
-            const url = `https://sleepy-dawn-70645.herokuapp.com/updateQuantity/${id}`
+            const url = `http://localhost:5000/updateQuantity/${id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {

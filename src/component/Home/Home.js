@@ -24,7 +24,7 @@ const Home = () => {
     // const [enroll] = useHook();
     const [equipments, setEquipments] = useState([]);
     useEffect(() => {
-        fetch("https://sleepy-dawn-70645.herokuapp.com/allEquipments")
+        fetch("http://localhost:5000/allEquipments")
             .then(res => res.json())
             .then(data => setEquipments(data))
     }, [equipments])
@@ -36,7 +36,7 @@ const Home = () => {
         console.log("deleting id", id)
         const proceed = window.confirm("Are You Sure You Want To Delete");
         if (proceed) {
-            const url = `https://sleepy-dawn-70645.herokuapp.com/delete/${id}`;
+            const url = `http://localhost:5000/delete/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
