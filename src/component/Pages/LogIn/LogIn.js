@@ -125,7 +125,8 @@ const LogIn = () => {
     }
     return (
 
-        <div className="bg login-container ">
+        <div className="bg">
+            <div className=' login-container'>
             <div className="login-title">Log In</div>
             <form onSubmit={handleLogInForm} className="login-form">
                 <input onChange={handleEmail} type="text" placeholder="Your Email" />
@@ -144,6 +145,7 @@ const LogIn = () => {
             </form>
             <ToastContainer theme="dark" />
             <button onClick={handleGoogle}>Google Log In</button>
+            </div>
         </div>
 
     );

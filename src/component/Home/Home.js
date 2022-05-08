@@ -5,6 +5,7 @@ import useHook from '../../useHook/useHook';
 import { Carousel, Row } from 'react-bootstrap';
 import { faAngleRight, faDumbbell, faEdit, faFilter, faHeartbeat, faSwimmingPool, faTransgender, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import photoCalass01 from '../../img/classes/class-1.jpg';
+import photoCalass02 from '../../img/classes/class-2.jpg';
 import photoCalass03 from '../../img/classes/class-3.jpg';
 import photoCalass04 from '../../img/classes/class-4.jpg';
 import photoCalass05 from '../../img/classes/class-5.jpg';
@@ -60,17 +61,14 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-6 offset-lg-6">
-                                    <div className="hi-text">
-                                        <span>Shape your body</span>
-                                        <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
-                                        <Link to="/" className="primary-btn">Get info</Link>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div className="hi-text">
+                            <span>Shape your body</span>
+                            <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
+                            <Link to="/" className="primary-btn">Get info</Link>
                         </div>
+
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className='vh-100 vw-100'>
@@ -81,17 +79,13 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-6 offset-lg-6 ">
-                                    <div className="hi-text">
-                                        <span>Shape your body</span>
-                                        <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
-                                        <Link to="/" className="primary-btn">Get info</Link>
-                                    </div>
-                                </div>
+                        
+                            <div className="hi-text">
+                                <span>Shape your body</span>
+                                <h1 className='text-white'>Be <strong className='text-danger'>strong</strong> traning hard</h1>
+                                <Link to="/" className="primary-btn">Get info</Link>
                             </div>
-                        </div>
+                        
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -167,7 +161,7 @@ const Home = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="class-item">
                                 <div className="ci-pic">
-                                    <img src={photoCalass03} alt="" />
+                                    <img src={photoCalass02} alt="" />
                                 </div>
                                 <div className="ci-text">
                                     <span>Cardio</span>

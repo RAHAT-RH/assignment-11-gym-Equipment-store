@@ -10,12 +10,6 @@ const ResetPassword = () => {
     }
     const [sendPasswordResetEmail,  error] = useSendPasswordResetEmail(auth);
 
-    useEffect(() => {
-        if (error) {
-            toast("Failed")
-        }
-    }, [error])
-
 
 
     const handleResetPassword = (event) => {
